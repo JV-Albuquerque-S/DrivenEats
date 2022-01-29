@@ -1,188 +1,84 @@
 //Primeira seção, pratos.
 
-function selecionar1() {
-    const elemento1 = document.querySelector('.opcao1');
-    elemento1.classList.add('opcaoSelec');
+let pratos = 0;
 
-    const elemento2 = document.querySelector('.opcao2');
-    elemento2.classList.remove('opcaoSelec');
-
-    const elemento3 = document.querySelector('.opcao3');
-    elemento3.classList.remove('opcaoSelec');
-    
-    const ativar1 = document.querySelector('.icon1');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon2');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon3');
-    ativar3.classList.add('ativar');
-
+if(pratos == 1){
+    alert("aaa");
 }
 
-function selecionar2() {
-    const elemento1 = document.querySelector('.opcao2');
-    elemento1.classList.add('opcaoSelec');
+function selecionarPrato(classeOpcao) {
+    const retirar = document.querySelector(".pratos .opcaoSelec");
+    if(retirar != null) {
+        retirar.classList.remove("opcaoSelec");
+    }
 
-    const elemento2 = document.querySelector('.opcao1');
-    elemento2.classList.remove('opcaoSelec');
+    const elemento = document.querySelector(classeOpcao);
+    elemento.classList.add('opcaoSelec');
 
-    const elemento3 = document.querySelector('.opcao3');
-    elemento3.classList.remove('opcaoSelec');
-
-    const ativar1 = document.querySelector('.icon2');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon1');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon3');
-    ativar3.classList.add('ativar');
+    pratos += 1;
 }
 
-function selecionar3() {
-    const elemento1 = document.querySelector('.opcao3');
-    elemento1.classList.add('opcaoSelec');
+function selecionarIcon(classeIcon) {
+    const removerIcon = document.querySelector(".pratos .ativar");
+    if(removerIcon != null){
+        removerIcon.classList.remove('ativar');
+    }
 
-    const elemento2 = document.querySelector('.opcao1');
-    elemento2.classList.remove('opcaoSelec');
-
-    const elemento3 = document.querySelector('.opcao2');
-    elemento3.classList.remove('opcaoSelec');
-
-    const ativar1 = document.querySelector('.icon3');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon1');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon2');
-    ativar3.classList.add('ativar');
+    const inserirIcon = document.querySelector(classeIcon);
+    inserirIcon.classList.add('ativar');
 }
 
 
 //Segunda seção, bebidas.
 
-function selecionar4() {
-    const elemento1 = document.querySelector('.opcao4');
-    elemento1.classList.add('opcaoSelec');
 
-    const elemento2 = document.querySelector('.opcao5');
-    elemento2.classList.remove('opcaoSelec');
+let bebidas = 0;
 
-    const elemento3 = document.querySelector('.opcao6');
-    elemento3.classList.remove('opcaoSelec');
+function selecionarBebida(classeOpcao) {
+    const retirar = document.querySelector(".bebidas .opcaoSelec");
+    if(retirar != null) {
+        retirar.classList.remove("opcaoSelec");
+    }
 
-    const ativar1 = document.querySelector('.icon4');
-    ativar1.classList.remove('ativar');
+    const elemento = document.querySelector(classeOpcao);
+    elemento.classList.add('opcaoSelec');
 
-    const ativar2 = document.querySelector('.icon5');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon6');
-    ativar3.classList.add('ativar');
+    bebidas += 1;
 }
 
-function selecionar5() {
-    const elemento1 = document.querySelector('.opcao5');
-    elemento1.classList.add('opcaoSelec');
+function selecionarIconDrink(classeIcon) {
+    const removerIcon = document.querySelector(".bebidas .ativar");
+    if(removerIcon != null){
+        removerIcon.classList.remove('ativar');
+    }
 
-    const elemento2 = document.querySelector('.opcao4');
-    elemento2.classList.remove('opcaoSelec');
-
-    const elemento3 = document.querySelector('.opcao6');
-    elemento3.classList.remove('opcaoSelec');
-
-    const ativar1 = document.querySelector('.icon5');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon4');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon6');
-    ativar3.classList.add('ativar');
-}
-
-function selecionar6() {
-    const elemento1 = document.querySelector('.opcao6');
-    elemento1.classList.add('opcaoSelec');
-
-    const elemento2 = document.querySelector('.opcao4');
-    elemento2.classList.remove('opcaoSelec');
-
-    const elemento3 = document.querySelector('.opcao5');
-    elemento3.classList.remove('opcaoSelec');
-
-    const ativar1 = document.querySelector('.icon6');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon4');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon5');
-    ativar3.classList.add('ativar');
+    const inserirIcon = document.querySelector(classeIcon);
+    inserirIcon.classList.add('ativar');
 }
 
 
 //Terceira seção, sobremesas.
 
-function selecionar7() {
-    const elemento1 = document.querySelector('.opcao7');
-    elemento1.classList.add('opcaoSelec');
+let sobremesas = 0;
 
-    const elemento2 = document.querySelector('.opcao8');
-    elemento2.classList.remove('opcaoSelec');
+function selecionarSobremesa(classeOpcao) {
+    const retirar = document.querySelector(".sobremesas .opcaoSelec");
+    if(retirar != null) {
+        retirar.classList.remove("opcaoSelec");
+    }
 
-    const elemento3 = document.querySelector('.opcao9');
-    elemento3.classList.remove('opcaoSelec');
+    const elemento = document.querySelector(classeOpcao);
+    elemento.classList.add('opcaoSelec');
 
-    const ativar1 = document.querySelector('.icon7');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon8');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon9');
-    ativar3.classList.add('ativar');
+    sobremesas += 1;
 }
 
-function selecionar8() {
-    const elemento1 = document.querySelector('.opcao8');
-    elemento1.classList.add('opcaoSelec');
+function selecionarIconDessert(classeIcon) {
+    const removerIcon = document.querySelector(".sobremesas .ativar");
+    if(removerIcon != null){
+        removerIcon.classList.remove('ativar');
+    }
 
-    const elemento2 = document.querySelector('.opcao7');
-    elemento2.classList.remove('opcaoSelec');
-
-    const elemento3 = document.querySelector('.opcao9');
-    elemento3.classList.remove('opcaoSelec');
-
-    const ativar1 = document.querySelector('.icon8');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon7');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon9');
-    ativar3.classList.add('ativar');
-}
-
-function selecionar9() {
-    const elemento1 = document.querySelector('.opcao9');
-    elemento1.classList.add('opcaoSelec');
-
-    const elemento2 = document.querySelector('.opcao7');
-    elemento2.classList.remove('opcaoSelec');
-
-    const elemento3 = document.querySelector('.opcao8');
-    elemento3.classList.remove('opcaoSelec');
-
-    const ativar1 = document.querySelector('.icon9');
-    ativar1.classList.remove('ativar');
-
-    const ativar2 = document.querySelector('.icon7');
-    ativar2.classList.add('ativar');
-
-    const ativar3 = document.querySelector('.icon8');
-    ativar3.classList.add('ativar');
+    const inserirIcon = document.querySelector(classeIcon);
+    inserirIcon.classList.add('ativar');
 }
