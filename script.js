@@ -183,3 +183,21 @@ function cancelarPedido() {
     cancelar.classList.add("desativar");
 }
 
+function enviarPedido() {
+    let mensagem = ""
+    mensagem += "Olá, gostaria de fazer o pedido:";
+    mensagem += "\n";
+    mensagem += "- Prato: " + refeicao;
+    mensagem += "\n";
+    mensagem +="- Bebida: " + drink;
+    mensagem += "\n";
+    mensagem +="- Sobremesa: " + dessert;
+    mensagem += "\n";
+    mensagem +="Total: R$ " + precoTotal.toFixed(2);
+
+    let wppMens = encodeURIComponent(mensagem);
+    let preDef = "https://wa.me/5584987070839?text=";
+
+    window.open(preDef + wppMens);
+    
+}
