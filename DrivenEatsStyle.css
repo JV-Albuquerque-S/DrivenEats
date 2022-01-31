@@ -155,7 +155,7 @@ footer {
 }
 
 .botao1 {
-    background-color: green;
+    background-color: #32B72F;
 }
 
 .botao-texto1 {
@@ -228,7 +228,7 @@ footer {
 }
 
 .fechar-pedido {
-    height: 32px;
+    height: 52px;
     width: 309px;
     background-color: #FFFFFF;
     border-radius: 100px;

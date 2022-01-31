@@ -1,3 +1,69 @@
+let refeicao = "";
+let refeicaoPreco = 0;
+let refeicaoPrecoNum = 0;
+
+let drink = "";
+let drinkPreco = 0;
+let drinkPrecoNum = 0;
+
+let dessert = "";
+let dessertPreco = 0;
+let dessertPrecoNum = 0;
+
+let precoTotal = 0;
+
+function NomePrecoRef(nome, preco, precoNum, opcaoPrato, precoPrato, precoFinal) {
+    refeicao = nome;
+    refeicaoPreco = preco;
+    refeicaoPrecoNum = precoNum;
+    precoTotal = refeicaoPrecoNum + drinkPrecoNum + dessertPrecoNum;
+    precoTotal.toFixed(2);
+
+    const pratoNome = document.querySelector(opcaoPrato);
+    pratoNome.innerHTML = refeicao;
+
+    const pratoPreco = document.querySelector(precoPrato);
+    pratoPreco.innerHTML = refeicaoPreco;
+
+    const precoF = document.querySelector(precoFinal);
+    precoF.innerHTML = "R$" + precoTotal.toFixed(2).replace(".", ",");
+}
+
+function NomePrecoBeb(nome, preco, precoNum, opcaoPrato, precoPrato, precoFinal) {
+    drink = nome;
+    drinkPreco = preco;
+    drinkPrecoNum = precoNum;
+    precoTotal = refeicaoPrecoNum + drinkPrecoNum + dessertPrecoNum;
+    precoTotal.toFixed(2);
+
+    const pratoNome = document.querySelector(opcaoPrato);
+    pratoNome.innerHTML = drink;
+
+    const pratoPreco = document.querySelector(precoPrato);
+    pratoPreco.innerHTML = drinkPreco;
+
+    const precoF = document.querySelector(precoFinal);
+    precoF.innerHTML = "R$" + precoTotal.toFixed(2).replace(".", ",");
+}
+
+function NomePrecoSob(nome, preco, precoNum, opcaoPrato, precoPrato, precoFinal) {
+    dessert = nome;
+    dessertPreco = preco;
+    dessertPrecoNum = precoNum;
+    precoTotal = refeicaoPrecoNum + drinkPrecoNum + dessertPrecoNum;
+    precoTotal.toFixed(2);
+
+    const pratoNome = document.querySelector(opcaoPrato);
+    pratoNome.innerHTML = dessert;
+
+    const pratoPreco = document.querySelector(precoPrato);
+    pratoPreco.innerHTML = dessertPreco;
+
+    const precoF = document.querySelector(precoFinal);
+    precoF.innerHTML = "R$" + precoTotal.toFixed(2).replace(".", ",");
+}
+
+
 //Primeira seção, pratos.
 
 let pratos = 0;
@@ -12,6 +78,7 @@ function selecionarPrato(classeOpcao) {
     elemento.classList.add('opcaoSelec');
 
     pratos += 1;
+    //refeicao = ".nome";
 
     if(pratos >= 1 && bebidas >= 1 && sobremesas >= 1){
         const button = document.querySelector(".botao");
@@ -115,3 +182,4 @@ function cancelarPedido() {
     const cancelar = document.querySelector(".tela-final");
     cancelar.classList.add("desativar");
 }
+
