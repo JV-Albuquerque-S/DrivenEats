@@ -32,18 +32,18 @@
         </div>
 
         <div onclick="selecionarPrato('.opcao2'), selecionarIcon('.icon2')" class="opcao opcao2" data-identifier="food-option">
-            <img src="imagens/frango_yin_yang 1.png" alt="Prato de frango Yin Yang">
-            <h3 data-identifier="food-title">Frango Yin Yang</h3>
-            <h4>Um pouco de batata, um pouco de salada</h4>
-            <h5 data-identifier="food-price">R$ 14,90</h5>
+            <img src="imagens/x-bacon.jpg" alt="Prato de frango Yin Yang">
+            <h3 data-identifier="food-title">X-Bacon</h3>
+            <h4>Hamburger com várias fatias de bacon</h4>
+            <h5 data-identifier="food-price">R$ 11,50</h5>
             <ion-icon class="icon2 ionicon" name="checkmark-circle"></ion-icon>
         </div>
 
         <div onclick="selecionarPrato('.opcao3'), selecionarIcon('.icon3')" class="opcao opcao3" data-identifier="food-option">
-            <img src="imagens/frango_yin_yang 1.png" alt="Prato de frango Yin Yang">
-            <h3 data-identifier="food-title">Frango Yin Yang</h3>
-            <h4>Um pouco de batata, um pouco de salada</h4>
-            <h5 data-identifier="food-price">R$ 14,90</h5>
+            <img src="imagens/costela.png" alt="Prato de frango Yin Yang">
+            <h3 data-identifier="food-title">Costela de porco</h3>
+            <h4>Costela feita na brasa ao molho barbecue</h4>
+            <h5 data-identifier="food-price">R$ 25,00</h5>
             <ion-icon class="icon3 ionicon" name="checkmark-circle"></ion-icon>
         </div>
     </section>
@@ -61,18 +61,18 @@
         </div>
 
         <div onclick="selecionarBebida('.opcao5'), selecionarIconDrink('.icon5')" class="opcao opcao5" data-identifier="food-option">
-            <img src="imagens/coquinha_gelada 1.png" alt="Garrafas de coca-cola">
-            <h3 data-identifier="food-title">Coquinha gelada</h3>
-            <h4>Lata 350ml</h4>
-            <h5 data-identifier="food-price">R$ 4,90</h5>
+            <img src="imagens/vinho-tinto.jpg" alt="Garrafas de coca-cola">
+            <h3 data-identifier="food-title">Vinho tinto</h3>
+            <h4>Garrafa 750ml</h4>
+            <h5 data-identifier="food-price">R$ 59,90</h5>
             <ion-icon class="icon5 ionicon" name="checkmark-circle"></ion-icon>
         </div>
 
         <div onclick="selecionarBebida('.opcao6'), selecionarIconDrink('.icon6')" class="opcao opcao6" data-identifier="food-option">
-            <img src="imagens/coquinha_gelada 1.png" alt="Garrafas de coca-cola">
-            <h3 data-identifier="food-title">Coquinha gelada</h3>
-            <h4>Lata 350ml</h4>
-            <h5 data-identifier="food-price">R$ 4,90</h5>
+            <img src="imagens/suco.png" alt="Garrafas de coca-cola">
+            <h3 data-identifier="food-title">Suco de laranja</h3>
+            <h4>Copo 300ml</h4>
+            <h5 data-identifier="food-price">R$ 3,50</h5>
             <ion-icon class="icon6 ionicon" name="checkmark-circle"></ion-icon>
         </div>
     </section>
@@ -90,18 +90,18 @@
         </div>
 
         <div onclick="selecionarSobremesa('.opcao8'), selecionarIconDessert('.icon8')" class="opcao opcao8" data-identifier="food-option">
-            <img src="imagens/pudim 1.png" alt="Pudim">
-            <h3 data-identifier="food-title">Pudim</h3>
-            <h4>Apenas pudim</h4>
-            <h5 data-identifier="food-price">R$ 7,90</h5>
+            <img src="imagens/pavê.jpeg" alt="Pudim">
+            <h3 data-identifier="food-title">Pavê</h3>
+            <h4>Doce de biscoito com leite e chocolate</h4>
+            <h5 data-identifier="food-price">R$ 12,00</h5>
             <ion-icon class="icon8 ionicon" name="checkmark-circle"></ion-icon>
         </div>
 
         <div onclick="selecionarSobremesa('.opcao9'), selecionarIconDessert('.icon9')" class="opcao opcao9" data-identifier="food-option">
-            <img src="imagens/pudim 1.png" alt="Pudim">
-            <h3 data-identifier="food-title">Pudim</h3>
-            <h4>Apenas pudim</h4>
-            <h5 data-identifier="food-price">R$ 7,90</h5>
+            <img src="imagens/mousse.jpg" alt="Pudim">
+            <h3 data-identifier="food-title">Mousse</h3>
+            <h4>Doce de maracujá</h4>
+            <h5 data-identifier="food-price">R$ 10,00</h5>
             <ion-icon class="icon9 ionicon" name="checkmark-circle"></ion-icon>
         </div>
     </section>
@@ -109,10 +109,37 @@
 
     <!--Barra inferior-->
     <footer>
-        <div class="botao">
-            <p>Selecione os 3 itens<br>para fechar o pedido</p>
+        <button class="botao" onclick="telaFinal()" disabled>
+            <p class="botao-texto">Selecione os 3 itens<br>para fechar o pedido</p>
+        </button>
+    </footer>
+    
+
+    <div class="tela-final desativar">
+        <div class="confirmacao">
+            <h1>Confirme seu pedido</h1>
+            <div class="produtos">
+                <h2 class="produtoNome">Frango sla oq</h2>
+                <h2>14,90</h2>
+            </div>
+            <div class="produtos">
+                <h2 class="produtoNome">coquinha gelada</h2>
+                <h2>4,90</h2>
+            </div>
+            <div class="produtos">
+                <h2 class="produtoNome">pudim</h2>
+                <h2>7,90</h2>
+            </div>
+            <div class="produtos">
+                <h3>TOTAL</h3>
+                <h3>R$99,99</h3>
+            </div>
+
+            <button class="fechar-pedido">Tudo certo, pode pedir!</button>
+            <button class="cancelar-pedido" onclick="cancelarPedido()">Cancelar</button>
         </div>
-    </footer>    
+    </div>
+
 
     <script src="script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>

@@ -2,10 +2,6 @@
 
 let pratos = 0;
 
-if(pratos == 1){
-    alert("aaa");
-}
-
 function selecionarPrato(classeOpcao) {
     const retirar = document.querySelector(".pratos .opcaoSelec");
     if(retirar != null) {
@@ -16,6 +12,14 @@ function selecionarPrato(classeOpcao) {
     elemento.classList.add('opcaoSelec');
 
     pratos += 1;
+
+    if(pratos >= 1 && bebidas >= 1 && sobremesas >= 1){
+        const button = document.querySelector(".botao");
+        const buttonText = document.querySelector(".botao-texto");
+        button.classList.add("botao1");
+        buttonText.innerHTML = "Fechar pedido";
+        document.querySelector(".botao").disabled = false;
+    }
 }
 
 function selecionarIcon(classeIcon) {
@@ -44,6 +48,14 @@ function selecionarBebida(classeOpcao) {
     elemento.classList.add('opcaoSelec');
 
     bebidas += 1;
+
+    if(pratos >= 1 && bebidas >= 1 && sobremesas >= 1){
+        const button = document.querySelector(".botao");
+        const buttonText = document.querySelector(".botao-texto");
+        button.classList.add("botao1");
+        buttonText.innerHTML = "Fechar pedido";
+        document.querySelector(".botao").disabled = false;
+    }
 }
 
 function selecionarIconDrink(classeIcon) {
@@ -71,6 +83,14 @@ function selecionarSobremesa(classeOpcao) {
     elemento.classList.add('opcaoSelec');
 
     sobremesas += 1;
+
+    if(pratos >= 1 && bebidas >= 1 && sobremesas >= 1){
+        const button = document.querySelector(".botao");
+        const buttonText = document.querySelector(".botao-texto");
+        button.classList.add("botao1");
+        buttonText.innerHTML = "Fechar pedido";
+        document.querySelector(".botao").disabled = false;
+    }
 }
 
 function selecionarIconDessert(classeIcon) {
@@ -81,4 +101,17 @@ function selecionarIconDessert(classeIcon) {
 
     const inserirIcon = document.querySelector(classeIcon);
     inserirIcon.classList.add('ativar');
+}
+
+
+//Tela final de compra
+
+function telaFinal() {
+    const telaF = document.querySelector(".tela-final");
+    telaF.classList.remove("desativar");
+}
+
+function cancelarPedido() {
+    const cancelar = document.querySelector(".tela-final");
+    cancelar.classList.add("desativar");
 }
